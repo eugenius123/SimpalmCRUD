@@ -1,0 +1,21 @@
+<% if @user == nil %>
+  <h1> Please sign in or make new account to view details</h1>
+<% else %>
+  <div class="booyah-box">
+    <div class="row">
+      <div class="col-4">
+      </div>
+      <div class="col-8">
+        <h3>Email: <%= @user.email %></h1>
+        <h3>First Name: <%= @user.first_name%></h4>
+        <h3>Last Name: <%= @user.last_name%></h4>
+        <h3>Birth Date: <%= @user.birth_date%></h4>
+
+      </div>
+    </div>
+
+              <%= link_to 'Edit Profile', edit_user_registration_path %>
+    <div class="clear"></div>
+  </div>
+<% end %>
+
