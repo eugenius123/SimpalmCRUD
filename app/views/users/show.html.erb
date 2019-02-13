@@ -10,7 +10,9 @@
         <h3>First Name: <%= @user.first_name%></h4>
         <h3>Last Name: <%= @user.last_name%></h4>
         <h3>Birth Date: <%= @user.birth_date%></h4>
-
+        <% if !@user.profile_picture.url.nil? %>
+          <%= image_tag(@user.profile_picture.url) %>
+        <% end %>
       </div>
     </div>
 
